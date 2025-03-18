@@ -1,0 +1,11 @@
+/* style.css */
+
+/* Mainīgais fonts visam dokumentam */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Piemērs, kā mainīt fontu tikai virsrakstiem */
+h1, h2 {
+    font-family: 'Verdana', sans-serif;
+}
