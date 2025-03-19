@@ -1,11 +1,25 @@
-/* style.css */
-
-/* Mainīgais fonts visam dokumentam */
 body {
-    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; 
+    color: #333; 
+    font-family: 'Poppins', sans-serif; 
 }
 
-/* Piemērs, kā mainīt fontu tikai virsrakstiem */
-h1, h2 {
-    font-family: 'Verdana', sans-serif;
+
+h1, h2, h3, h4, h5 {
+    color: #d32f2f; 
+    font-family: 'Arial', sans-serif; 
+}
+
+
+button {
+    background-color: #d32f2f; 
+    color: white; 
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b71c1c; 
 }

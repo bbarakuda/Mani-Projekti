@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dzērieni</title>
+    <style>
+        /* Style to align the button and price on the same line */
+        .container {
+            display: flex;
+            align-items: center;
+        }
+        .container p {
+            margin-left: 10px; /* Add some space between the button and price */
+        }
+    </style>
+</head>
+<body>
+
+<script>
+function maksa(){
+    let dz = document.getElementsByName('drink');
+    for(i = 0; i < dz.length; i++) {
+       if(dz[i].checked) {
+           // Display the selected price next to the button
+           document.getElementById("cena").textContent = "Cena: " + dz[i].value + " EUR";
+       }
+    }
+}   
+</script>
+
+<p>Izvēlies dzērienu:</p>
+<form>
+  <input type="radio" id="kafija" name="drink" value="3.60">
+  <label for="kafija">Kafija</label><br>
+  <input type="radio" id="sula" name="drink" value="2.50">
+  <label for="sula">Sula</label><br>
+  <input type="radio" id="kakao" name="drink" value="3.20">
+  <label for="kakao">Kakao</label><br><br>
+
+  <div class="container">
+    <!-- Button to select drink -->
+    <input type="button" value="Izvēlies dzērienu" onclick="maksa()">
+    
+    <!-- Display price to the right of the button -->
+    <p id="cena"></p>
+  </div>
+</form>
+
+</body>
+</html>

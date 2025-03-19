@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Formas</title>
+    <link href="css/stils.css" rel="stylesheet" type="text/css">
+    <script>
+        function calculate(operation) {
+            var num1 = parseFloat(document.forms["calcForm"]["sk1"].value);
+            var num2 = parseFloat(document.forms["calcForm"]["sk2"].value);
+            var result;
+
+            if (isNaN(num1) || isNaN(num2)) {
+                result = "Please enter valid numbers!";
+            } else {
+                switch(operation) {
+                    case 'add':
+                        result = num1 + num2;
+                        break;
+                    case 'subtract':
+                        result = num1 - num2;
+                        break;
+                    case 'multiply':
+                        result = num1 * num2;
+                        break;
+                    case 'divide':
+                        if (num2 !== 0) {
+                            result = num1 / num2;
+                        } else {
+                            result = "Error: Division by 0";
+                        }
+                        break;
+                    default:
+                        result = "Invalid operation";
+                }
+            }
+
+            document.forms["calcForm"]["rez"].value = result;
+        }
+
+        function resetFields() {
+            document.forms["calcForm"]["sk1"].value = '';
+            document.forms["calcForm"]["sk2"].value = '';
+            document.forms["calcForm"]["rez"].value = '';
+        }
+    </script>
+</head>
+<body>
+    <h1>Formas un ievadlauku piemērs</h1>
+    <form>
+        <p>Šodienas datums <input name="datums"></p>
+        <p>Ja gribi uzzināt šodienas datumu, spied pogu DATUMS 
+            <input onclick="datums.value=new Date();" name="poga" value="DATUMS" type="button">
+        </p>
+        <p>Ja gribi izdzēst datumua lodziņa saturu, spied pogu RESET
+            <input value="RESET" type="reset">
+        </p>
+    </form>
+  
+  <form name="calcForm">
+        <div>1.skaitlis <input type="text" name="sk1"> </div>
+        <div>2.skaitlis <input type="text" name="sk2"> </div>
+        <hr>
+        <div>
+            <input value="+" name="add" onclick="calculate('add')" type="button">
+            <input value="-" name="subtract" onclick="calculate('subtract')" type="button">
+            <input value="X" name="multiply" onclick="calculate('multiply')" type="button">
+            <input value="/" name="divide" onclick="calculate('divide')" type="button">
+        </div>
+        <hr>
+        <div>Rezultāts <input name="rez"> </div>
+        <hr>
+        <div>
+            <input value="RESET" type="button" onclick="resetFields()">
+        </div>
+    </form>
+</body>
+</html>
