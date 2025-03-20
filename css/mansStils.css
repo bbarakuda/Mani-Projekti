@@ -1,25 +1,65 @@
+/* Pamatstili tīmekļa lapai */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 body {
-    background-color: #f4f4f4; 
-    color: #333; 
-    font-family: 'Poppins', sans-serif; 
+    font-family: "Poppins", sans-serif; 
+    font-size: 16px;
+    color: #ffffff; 
+    background-image: url('../images/fons123.jfif'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    line-height: 1.6; 
 }
 
 
 h1, h2, h3, h4, h5 {
-    color: #d32f2f; 
-    font-family: 'Arial', sans-serif; 
+    font-family: "Poppins", sans-serif;
+    color: #ffffff; 
+}
+
+/* Sadaļu virsrakstu stili */
+.w3-container h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 20px;
 }
 
 
-button {
-    background-color: #d32f2f; 
-    color: white; 
-    font-size: 16px;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
+p {
+    color: #f1f1f1; 
+    font-size: 1.1rem;
 }
 
-button:hover {
-    background-color: #b71c1c; 
+
+img {
+    max-width: 100%; 
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px; 
+    opacity: 0.9; 
+}
+
+
+body {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+@media screen and (max-width: 768px) {
+    .w3-sidebar {
+        width: 100%;
+        height: 100%;
+    }
+
+    .w3-main {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
